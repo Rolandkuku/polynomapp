@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { usePolynomial } from "./hooks/usePolynomial";
+import { PolynomialForm } from "./components/PolynomialForm";
+import { Polynomial } from "./components/Polynomial";
+import { PolynomialPlot } from "./components/PolynomialPlot";
+import styles from "./App.module.css";
+
+export interface Data {
+  a?: number;
+  b?: number;
+  c?: number;
+}
 
 function App() {
+  const [data, setData] = useState<Data>({});
+  const { a, b, c } = data;
+  const p = usePolynomial(a, b, c);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.main}>
+      <div>
+        <PolynomialForm onChange={setData} />
+        <Polynomial polynomial={p} />
+      </div>
+      <div>
+        <PolynomialPlot coordinates={p.coordinates} />
+      </div>
     </div>
   );
 }
