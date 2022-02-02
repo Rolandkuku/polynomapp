@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/polynomapp/static/css/main.d41ccc65.css",
+    "main.js": "/polynomapp/static/js/main.81c6a147.js",
+    "static/js/787.1bebd463.chunk.js": "/polynomapp/static/js/787.1bebd463.chunk.js",
+    "index.html": "/polynomapp/index.html",
+    "main.d41ccc65.css.map": "/polynomapp/static/css/main.d41ccc65.css.map",
+    "main.81c6a147.js.map": "/polynomapp/static/js/main.81c6a147.js.map",
+    "787.1bebd463.chunk.js.map": "/polynomapp/static/js/787.1bebd463.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d41ccc65.css",
+    "static/js/main.81c6a147.js"
+  ]
+}
